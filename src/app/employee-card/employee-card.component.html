@@ -1,0 +1,16 @@
+<li>
+    <div class="li-content">
+        {{employee.typeName| titlecase}}
+        <div *ngIf="employee.typeName.toLowerCase() === 'manager'">
+            <app-add-department-employee 
+                (employeeAddedEvent)="employeeAddedToManager($event)">
+            </app-add-department-employee>
+        </div>
+    </div>      
+    <ul *ngIf="employee.listEmployees.length > 0">
+        <app-employee-card 
+            *ngFor="let e of employee.listEmployees" 
+            [employee]="e" >
+        </app-employee-card>
+    </ul>  
+</li>

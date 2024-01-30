@@ -1,0 +1,5 @@
+.li-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-right: 10px;
+}

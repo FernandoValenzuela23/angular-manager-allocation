@@ -1,0 +1,9 @@
+.department{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botonera{
+    align-self: center;
+}
+

@@ -1,0 +1,15 @@
+<div class="department">
+    <h1>My Department</h1>
+    <app-add-department-employee 
+        class="botonera" 
+        (employeeAddedEvent)="employeeAddedToDeparment($event)">
+    </app-add-department-employee>
+    <h1>Total cost $ {{totaAllocation}}</h1>    
+</div>
+
+<ul >    
+    <app-employee-card 
+        *ngFor="let e of employeesDepartment" 
+        [employee]="e">
+    </app-employee-card>
+</ul>
